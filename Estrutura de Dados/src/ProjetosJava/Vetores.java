@@ -27,6 +27,12 @@ public class Vetores {
 				lista[i] = entrada.next();
 			}
 			else if(op == 2) {
+				
+				System.out.print("Digite o nome para remover: ");
+				
+				
+			}
+			else if(op == 3) {
 				for(int l=0;l<lista.length;l++) {
 					if(lista[l]==null)
 						break;
