@@ -34,4 +34,10 @@ public class Meuframe extends JFrame implements ActionListener{
 		System.out.println("Você clicou!");
 	}
 
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
