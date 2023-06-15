@@ -6,28 +6,23 @@ import java.util.InputMismatchException;
 public class Excecao {
 
 	public static void main(String[] args) {
-		Scanner entrada = new Scanner(System.in);
-		boolean continuar = true;
-		
-		do {
+
+
+		int[] numeros = {4, 8, 16, 32, 64, 128};
+
+		int[] denom = {2, 0, 4, 8, 0};
+
+		for (int i=0; i<numeros.length; i++) {
 			try {
-				System.out.print("Numero: ");
-				int a = entrada.nextInt();
-				System.out.print("Divisor: ");
-				int b = entrada.nextInt();
-			
-				System.out.println(a/b);
-			}
-			catch(InputMismatchException e1){
-				System.err.println("Erro de InputMismatchException capturado!");
-			}
-			catch(Throwable e2) {
-				System.err.println("Erro de ArithmaticException capturado!");
+				System.out.println(numeros[i] + "/" + denom[i] + " = " + (numeros[i]/denom[i]));
+			}catch(ArithmeticException e1) {
+				System.out.println("Erro ao dividir por zero");
+			}catch(ArrayIndexOutOfBoundsException e) {
+				System.out.println("Posição do Array invalida");
 			}
 			finally {
-				System.out.println("Finally executado...");
+				System.out.println("Linha Finally sempre executa após o catch");
 			}
-		}while(continuar);
+		}
 	}
-
 }
