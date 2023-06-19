@@ -20,7 +20,7 @@ public class Frame extends JFrame{
 		label1.setToolTipText("Esta é a Label1");
 		add(label1);
 		
-		Icon bug = new ImageIcon(getClass().getResource("img.png"));
+		Icon bug = new javax.swing.ImageIcon("img.PNG");
 		label2 = new JLabel("Label de Texto com Icone", bug, SwingConstants.LEFT);
 		label2.setToolTipText("Esta é a Label2");
 		add(label2);
