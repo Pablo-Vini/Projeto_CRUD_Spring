@@ -10,7 +10,7 @@ public class index {
 		
 		labelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		labelFrame.setSize(460, 380);
+		labelFrame.setSize(560, 480);
 		
 		labelFrame.setVisible(true);
 	}

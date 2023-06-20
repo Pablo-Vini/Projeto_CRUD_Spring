@@ -34,6 +34,4 @@ public class Frame extends JFrame{
 		add(label3);
 		
 	}
-	
-	
 }
