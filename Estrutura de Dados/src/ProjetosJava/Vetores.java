@@ -15,7 +15,7 @@ public class Vetores {
 		int i=0, op=0;
 		
 		while(true) {
-			System.out.println("1 - Inserir um nome");
+			System.out.println("\n1 - Inserir um nome");
 			System.out.println("2 - Confira a lista de nomes ");
 			System.out.println("3 - Remover da lista");
 			System.out.println("4 - Sair");
@@ -23,16 +23,10 @@ public class Vetores {
 			op = entrada.nextInt();
 			
 			if(op == 1) {
-				System.out.print("Nome: ");
+				System.out.print("\nNome: ");
 				lista[i] = entrada.next();
 			}
 			else if(op == 2) {
-				
-				System.out.print("Digite o nome para remover: ");
-				
-				
-			}
-			else if(op == 3) {
 				for(int l=0;l<lista.length;l++) {
 					if(lista[l]==null)
 						break;
@@ -40,12 +34,32 @@ public class Vetores {
 				}
 				
 			}
+			else if(op == 3) {
+				for(int l=0;l<lista.length;l++) {
+					if(lista[l]==null)
+						break;
+					System.out.println(l + "  " + lista[l]);
+				}
+				
+				System.out.print("\nEscolha o nome para remover: ");
+				int remover = entrada.nextInt();
+				
+				lista[remover] = "";
+				
+				for(int j=0;j<lista.length;j++) {
+					if(lista[j]==null)
+						break;
+					System.out.println(j + "  " + lista[j]);
+				}
+				
+			}
 			else if(op == 4) {
-				System.out.println("Saindo...");
+				System.out.print("\nSaindo...");
 				break;
+				
 			}
 			else {
-				System.out.println("Insira uma opção válida!");
+				System.out.println("\nInsira uma opção válida!");
 			}
 			
 			
