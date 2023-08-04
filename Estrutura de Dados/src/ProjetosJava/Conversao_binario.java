@@ -5,17 +5,19 @@ import java.util.Scanner;
 public class Conversao_binario {
 
 	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int valorint;
+		Scanner scanInt = new Scanner(System.in);
+		Scanner scanBin = new Scanner(System.in);
+		int valorint, inter;
 		String valorbin;
 		String div = "";
 		
 		System.out.println("0 - Conversor de Decimal para Binário");
 		System.out.println("1 - Conversor de Binario para Decimal");
 		System.out.print("==> ");
-		if(scan.nextInt() == 0) {
+		int op = scanInt.nextInt();
+		if(op == 0) {
 			System.out.print("Digite o valor Decimal: ");
-			valorint=scan.nextInt();
+			valorint=scanInt.nextInt();
 			
 			while(valorint > 0) {
 				if(valorint % 2 == 0) {
@@ -32,8 +34,14 @@ public class Conversao_binario {
 			
 			
 		}
-		else if(scan.nextInt() == 1) {
+		else if(op == 1) {
 			System.out.print("Digite o valor Binário: ");
+			valorbin = scanBin.nextLine();
+			
+			for(int i=0;i<valorbin.length();i++) {
+				inter = Integer.parseInt(valorbin.substring(i));
+				System.out.println(inter);
+			}
 			
 			
 		}
